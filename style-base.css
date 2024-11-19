@@ -27,6 +27,28 @@ ul
     margin: 0 25px;
 }
 
+
+
+.quadrados1{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 800px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.quadrados2{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 600px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.nós{
+    width: 100px;
+    height: 100px;
+    background-color: #F2913D;
+}
 .footer
 {
 
