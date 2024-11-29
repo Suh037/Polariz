@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.termos{
+    text-align: justify;
+    max-width: 600px;
+}
+
+p{
+    margin-bottom: 1rem;
+}
+
+.corpo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header {
+    background-image: url(../sueelen/imgs/fundo-header\ \(1\).jpg);
+    background-size: cover;
+    height: 40dvh;
+}
+
+header > nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > nav > ul {
+    display: inline-flex;
+    justify-content:right;
+    margin-top: 2rem;
+    list-style: none;
+}
+
+header > nav > ul > li {
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+header > nav > ul > li > a {
+    color: #f4f4f4;
+    border: solid 1px #f4f4f4;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header > nav > ul > li > a:hover {
+    color: #ffffff;
+    background-color: #d95d41;
+}
+
+.logo{
+
+    height: 20dvh;
+    width: 40dvh;
+    border-radius: 1rem;
+    margin: 2rem;
+    background-image: url(../sueelen/imgs/logo-grande-2.png);
+    background-size: cover;
+}
+
+@media (max-width: 759px){
+
+    header > nav > ul 
+    {
+        display: inline;
+        column-count: 2; 
+    }
+
+}
+
+/* rodape */
+*{
+  
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    
+  }
+  
+  footer{
+    
+    color: white;
+    width: 100%;
+    
+  }
+  
+  .lista{
+    
+    display: grid;
+    background-image: url(../sueelen/imgs/SUMELVIGUINI\ \(1\).png);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 3.5rem;
+    
+  }
+  
+  .lista-elementos{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+  
+    
+  }
+  
+  .lista-elementos > li > a{
+    text-align: center;
+    text-decoration: none;
+    color: lightgray;
+  }
+  
+  .direitos{
+    
+    background-color: dimgray;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    font-size: .9rem;
+    background-color: #d95d41;
+  }
+  
+  @media screen and (max-width: 768px){
+    
+    .lista
+    {
+      
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+      
+    }
+    
+  }

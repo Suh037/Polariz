@@ -1,0 +1,488 @@
+@charset "UTF-8";
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+
+    width: 0px;
+    height: 0px;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.corpo{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+}
+
+.caixa-corpo{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F2913D;
+    width: 100%;
+
+}
+
+/*apresentãção do pessoal.*/
+
+.fundo{
+    background-image: url(../sueelen/imgs/SUMELVIGUINI\ \(1\).png);
+    background-size: cover;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 50px;
+    color: #ffffff;
+    font-family: 'Anton';
+}
+
+.titulo1{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Anton';
+}
+
+.titulo2{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Anton';
+}
+
+.titulo3{
+    text-align: center;
+    font-size: 50px;
+    color: #ffffff;
+    font-family:'Open Sans';
+}
+
+.titulo4{
+    text-align: center;
+    font-size: 50px;
+    color: #ffffff;
+    font-family: 'Anton';
+}
+
+.texto1{
+    font-family:'Open Sans';
+    font-size: 20px;
+}
+
+.texto2{
+    font-family:'Open Sans';
+    font-size: 25px;
+}
+
+.conteinerApre{
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 1.5rem;
+padding: 5rem;
+}
+
+.cards__container{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+gap: 3.5rem;
+line-height: 0;
+}
+
+.card__article{
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    border-radius: 1.5rem;
+}
+
+.card__img-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.card__img{
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    border-radius: 1.5rem;
+    height: 280px;
+    width: 300px;
+}
+
+.card__hover-text{
+    position: absolute;
+    line-height: 1.6;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(209, 194, 194, 0.7);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out, bottom 0.5s ease-in-out;
+    pointer-events: none; 
+    font-family:'Open Sans';
+}
+
+.card__img-container:hover .card__img {
+    filter: brightness(70%);
+}
+
+.card__img-container:hover .card__hover-text {
+    transform: translateY(0);
+    bottom: 0;
+}
+
+.card__data{
+width: 280px;
+background-color: rgba(255, 255, 255, 0.833);
+padding: 1.5rem 2rem;
+box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+border-radius: 1rem;
+position: absolute;
+bottom: -9rem;
+left: 0;
+right: 0;
+margin-inline: auto;
+opacity: 0;
+transition: opacity 1s 1s;
+}
+
+.card__descripition{
+display: block;
+font-size: var(--small-font-size);
+margin-bottom: .25rem;
+}
+
+.card__title{
+font-weight: 500;
+color: black;
+margin-bottom: .75rem;
+}
+
+.card_button{
+text-decoration: none;
+font-weight: 500;
+color: black;
+}
+
+@keyframes show-data{
+50%{
+    transform: translateY(-10rem);
+}
+100%{
+    transform: translateY(-7rem);
+}
+}
+
+@keyframes remove-overflow{
+to{
+    overflow: initial;
+}
+}
+
+@keyframes remove-data{
+0%{
+    transform: translateY(-7rem);
+}
+50%{
+    transform: translateY(-10rem);
+}
+100%{
+    transform: translateY(.5rem);
+}
+}
+
+
+@keyframes Show-overflow {
+0%{
+    overflow: initial;
+    pointer-events: none;
+}
+50%{
+    overflow: hidden;
+}
+}
+
+/* inicio do menu */
+
+header {
+    background-image: url(../sueelen/imgs/fundo-header\ \(1\).jpg);
+    background-size: cover;
+    height: 50dvh;
+}
+
+header > nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > nav > ul {
+    display: inline-flex;
+    justify-content:right;
+    margin-top: 2rem;
+    list-style: none;
+}
+
+header > nav > ul > li {
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+header > nav > ul > li > a {
+    color: #f4f4f4;
+    border: solid 1px #f4f4f4;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header > nav > ul > li > a:hover {
+    color: #ffffff;
+    background-color: #d95d41;
+}
+
+.logo{
+
+    height: 20dvh;
+    width: 40dvh;
+    border-radius: 1rem;
+    margin: 2rem;
+    background-image: url(../sueelen/imgs/logo-grande-2.png);
+    background-size: cover;
+
+
+}
+@media (max-width: 759px){
+
+    header > nav > ul 
+    {
+        display: inline;
+        column-count: 2; 
+    }
+
+}
+
+/* fim do menu */
+
+.nós{
+    width: 100px;
+    height: 100px;
+    background-color: #F2913D;
+}
+
+.nome{
+    justify-content: right;
+}
+
+section {
+    padding: 30px 20px;
+    margin: 10px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    background-color:#ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    padding: 20px;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* form */
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color:#333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+form{
+
+    width: 100%; 
+    max-width: 700px; 
+    padding: 1rem;
+
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .star {
+    font-size: 2rem;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+  
+  .star.selected {
+    color: #f39c12;
+  }
+  
+  .texto{
+    color: #ffffff;
+    font-family: 'Open Sans';
+  }
+
+/* rodape */
+*{
+  
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  
+}
+
+footer{
+  
+  color: white;
+  width: 100%;
+  
+}
+
+.lista{
+  
+  display: grid;
+  background-image: url(../sueelen/imgs/SUMELVIGUINI\ \(1\).png);
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem 3.5rem;
+  
+}
+
+.lista-elementos{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+
+  
+}
+
+.lista-elementos > li > a{
+  text-align: center;
+  text-decoration: none;
+  color: lightgray;
+}
+
+.direitos{
+  
+  background-color: dimgray;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  font-size: .9rem;
+  background-color: #d95d41;
+}
+
+@media screen and (max-width: 768px){
+  
+  .lista
+  {
+    
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    
+  }
+  
+}
+
+
+/* texto o que somos */
+
+#o-que-somos{
+
+    max-width: 700px;
+    text-align: justify;
+    text-indent: 1rem;
+
+}
+
+/*termos de condição*/
+
+.temos1{
+    font-family:'Anton';
+    background-color: #d95d41;
+}
